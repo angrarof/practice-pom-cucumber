@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cucumber</groupId>
+    <artifactId>practice-pom-cucumber</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M5</version>
+                    <configuration>
+                        <!--reuseForks>false</reuseForks>
+                        <forkCount>1</forkCount-->
+                        <includes>
+                            <include>**/TestRunner.java</include>
+                        </includes>
+                        <!--parallel>classesAndMethods</parallel>
+                        <useUnlimitedThreads>true</useUnlimitedThreads-->
+                    </configuration>
+                </plugin>
+                <!--plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>3.0.0-M5</version>
+                    <executions>
+                        <execution>
+
+                            <goals>
+                                <goal>testing</goal>
+                            </goals>
+                            <configuration>
+
+                                <parallel>methods</parallel>
+                                <useUnlimitedThreads>true</useUnlimitedThreads>
+                                <threadCount>4</threadCount>
+                                <perCountThreadCount>true</perCountThreadCount>
+                                <includes>
+                                    <include>**/TestRunner.java</include>
+                                </includes>
+                            </configuration>
+                        </execution>
+                    </executions>
+
+                </plugin-->
+            </plugins>
+        </pluginManagement>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>7.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <!--REPORT-->
+        <dependency>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
