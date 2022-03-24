@@ -33,7 +33,7 @@ public class BasePage {
     public void clickElement(WebElement element){
         waitElementClickable(element);
         element.click();
-        Select select = new Select(element);
+        //Select select = new Select(element);
         //frame index, idname, frameelement
         //select id, value, visibleText
     }
